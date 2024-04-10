@@ -1,0 +1,99 @@
+/* 
+Make the following changes: 
+
+• Use the "Lato" font family at 18px throughout the body of the document.
+• Cover the background with the "map-bg.jpg" image.
+• Use the "Supermercado One" font at 45px (colored #5d4037) for the restaurant name.
+• Set the separator between the columns (the "column-rule") to be 2px dashed rosybrown.
+• Show each of the section headings of the menu (e.g. "Starters") in small caps, colored #6d4c41.
+• Make the name of each menu item appear in bold in a 20px size.
+• Show the price of each item in a large font in the color named "firebrick".
+• Draw a 2px dashed rosybrown border around the address/footer.
+
+The code provided below is needed, but you can add properties and values to the selectors.
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Lato|Supermercado+One");
+
+body {
+  background-image: url("img/map-bg.jpeg");
+  font-family: "Lato";
+  font-size: 18px;
+  margin: 0;
+}
+
+nav {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  box-sizing: border-box; 
+}
+
+#main {
+  max-width: 900px;
+  margin: 10px auto;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin: 0;
+  font-variant: small-caps;
+  color: #6d4c41;
+}
+
+dd {
+  margin: 0 0 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.details {
+  order: 1;
+  flex: 1 1 100%; 
+}
+
+.price {
+  order: 2;
+  padding-left: 10px;
+  color: firebrick;
+  flex: 0 1 auto;
+}
+
+address {
+  padding: 10px;
+}
+
+h1 {
+  font-family: "Supermercado One";
+  font-size: 45px;
+  color: #5d4037;
+}
+
+dt {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+footer {
+  border: 2px dashed rosybrown;
+}
+
+@media only screen and (max-width: 600px) {
+  #menu {
+    flex-direction: column;
+  }
+
+  nav {
+    font-size: 14px;
+  }
+}
+
